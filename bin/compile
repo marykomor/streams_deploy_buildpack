@@ -10,3 +10,5 @@ set -e
 set -o pipefail
  
 cd $BUILD_DIR
+echo "Content of $BUILD_DIR"
+ls $BUILD_DIR
