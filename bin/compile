@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# bin/compile <build-dir>
+# usage: bin/compile <build-dir> <cache-dir>
 echo "Compiling using the custom streams buildpack"
  
 BUILD_DIR=$1
