@@ -2,9 +2,23 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
  
-cat << EOF
-addons: []
-default_process_types: {
-web: ./start.sh
-}
-EOF
+echo "Deploying to Streams"
+
+BUILD_DIR=$1
+RUNTIME_JAR="$BUILD_DIR/lib/runnable.jar"
+DEPLOY_JAR="$BUILD_DIR/lib/Deploy.jar"
+
+if [ -e $DEPLOY_JAR ]; then
+    echo "Deploy jar found: $DEPLOY_JAR"
+else 
+    echo "Deploy jar NOT found: $DEPLOY_JAR"
+fi
+
+if [ -e $RUNTIME_JAR ]; then
+    echo "Runtime jar found: $RUNTIME_JAR"
+else 
+    echo "Runtime jar NOT found: $RUNTIME_JAR"
+fi
+
+echo "Running java command: java -jar $DEPLOY_JAR $RUNTIME_JAR"
+java -jar $DEPLOY_JAR $RUNTIME_JAR
