@@ -1,3 +1,12 @@
 #!/usr/bin/env bash
-# bin/detect <build-dir>
+# bin/compile <build-dir>
 echo "Compiling using the custom streams buildpack"
+ 
+BUILD_DIR=$1
+CACHE_DIR=$2
+BUILD_PACK_DIR=$(dirname $(dirname $0))
+ 
+set -e
+set -o pipefail
+ 
+cd $BUILD_DIR
