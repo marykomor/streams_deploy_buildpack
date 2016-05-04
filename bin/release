@@ -3,6 +3,7 @@
 # bin/release <build-dir>
  
 echo "Deploying to Streams"
+echo "Working dir: `pwd`"
 
 BUILD_DIR=$1
 RUNTIME_JAR="$BUILD_DIR/lib/runnable.jar"
