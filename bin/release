@@ -23,5 +23,6 @@ else
     echo "Runtime jar NOT found: $RUNTIME_JAR"
 fi
 
+echo "JAVA_HOME: $JAVA_HOME"
 echo "Running java command: java -jar $DEPLOY_JAR $RUNTIME_JAR"
 java -jar $DEPLOY_JAR $RUNTIME_JAR
