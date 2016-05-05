@@ -27,6 +27,5 @@ fi
 echo "JAVA_HOME: $JAVA_HOME"
 echo "PATH: $PATH"
 echo "which java"
-which java
 echo "Running java command: java -jar $DEPLOY_JAR $RUNTIME_JAR"
-java -jar $DEPLOY_JAR $RUNTIME_JAR
+$JAVA_HOME/bin/java -jar $DEPLOY_JAR $RUNTIME_JAR
