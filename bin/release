@@ -6,6 +6,7 @@ echo "Deploying to Streams"
 echo "Working dir: `pwd`"
 
 export JAVA_HOME=/opt/IBM/java8
+export PATH=$JAVA_HOME/bin:$PATH
 
 BUILD_DIR=$1
 RUNTIME_JAR="$BUILD_DIR/lib/runnable.jar"
