@@ -11,6 +11,6 @@ set -o pipefail
  
 export JAVA_HOME=/opt/IBM/java8
 
-cd $BUILD_DIR
-echo "Content of $BUILD_DIR"
-ls $BUILD_DIR
+#cd $BUILD_DIR
+#echo "Content of $BUILD_DIR"
+#ls $BUILD_DIR
